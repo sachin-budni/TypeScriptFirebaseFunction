@@ -7,5 +7,143 @@
   text :{{localData.data.text}}<br/>
 </div> -->
 <!-- {{data | async | json}} -->
-{{ message | async | json }}
+<!-- {{ message | async | json }} -->
+
+<!-- <input type="file" (change)="ImportFile($event)" accept="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet">
+
+<div *ngFor="let data of datas">
+  {{data.eid}}
+  {{data.ename}}
+  {{data.esal}}
+</div>
+{{datas | json}} -->
+
+<h1 class="fonts">sachin budni</h1>
+
+<mat-form-field>
+  <mat-label>Themes</mat-label>
+  <mat-select [(ngModel)]="theme" (selectionChange)="onSetTheme('first')">
+    <mat-option value="first">
+      first
+    </mat-option>
+    <mat-option value="second">
+      second
+    </mat-option>
+  </mat-select>
+</mat-form-field>
+{{theme}}
+<br/>
+
+<mat-card >
+  Main Theme:
+  <button mat-raised-button color="primary">
+    Primary
+  </button>
+  <button mat-raised-button color="accent">
+    Accent
+  </button>
+  <button mat-raised-button color="warn">
+    Warning
+  </button>
+</mat-card>
+
+<mat-card class="alternate-theme">
+  Alternate Theme:
+  <button mat-raised-button color="primary">
+    Primary
+  </button>
+  <button mat-raised-button color="accent">
+    Accent
+  </button>
+  <button mat-raised-button color="warn">
+    Warning
+  </button>
+</mat-card>
+
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<mat-card>
+  <mat-toolbar color="primary" >
+    <mat-toolbar-row>
+      <span>Custom Toolbar</span>
+    </mat-toolbar-row>
+  
+    <mat-toolbar-row>
+      <span>Second Line</span>
+      <span class="example-spacer"></span>
+      <mat-icon class="example-icon" aria-hidden="false" aria-label="Example user verified icon">verified_user</mat-icon>
+    </mat-toolbar-row>
+  
+    <mat-toolbar-row>
+      <span>Third Line</span>
+      <span class="example-spacer"></span>
+      <mat-icon class="example-icon" aria-hidden="false" aria-label="Example heart icon">favorite</mat-icon>
+      <mat-icon class="example-icon" aria-hidden="false" aria-label="Example delete icon">delete</mat-icon>
+    </mat-toolbar-row>
+  </mat-toolbar>
+</mat-card>
+
+
+
+<mat-card class="example-card">
+  <mat-card-header>
+    <div mat-card-avatar class="example-header-image"></div>
+    <mat-card-title>Shiba Inu</mat-card-title>
+    <mat-card-subtitle>Dog Breed</mat-card-subtitle>
+  </mat-card-header>
+  <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
+  <mat-card-content>
+    <p>
+      The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
+      A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
+      bred for hunting.
+    </p>
+  </mat-card-content>
+  <mat-card-actions>
+    <button mat-button>LIKE</button>
+    <button mat-button>SHARE</button>
+  </mat-card-actions>
+</mat-card>
 <router-outlet></router-outlet>
+
+
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<mat-toolbar color="primary">
+  <mat-toolbar-row>
+    <span>Material App</span>
+    <span class="example-spacer"></span>
+    <mat-icon class="example-icon">favorite</mat-icon>
+    <mat-icon class="example-icon">delete</mat-icon>
+  </mat-toolbar-row>
+</mat-toolbar>
+
+<mat-card class="example-card">
+  <mat-card-header>
+    <div mat-card-avatar class="example-header-image"></div>
+    <mat-card-title>Shiba Inu</mat-card-title>
+    <mat-card-subtitle>Dog Breed</mat-card-subtitle>
+  </mat-card-header>
+  <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
+  <mat-card-content>
+    <p>
+      The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
+      A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
+      bred for hunting.
+    </p>
+  </mat-card-content>
+  <mat-card-actions>
+    <button mat-raised-button color="accent">LIKE</button>
+    <button mat-raised-button color="accent">SHARE</button>
+  </mat-card-actions>
+</mat-card>

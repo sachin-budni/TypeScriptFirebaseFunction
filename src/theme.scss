@@ -1,0 +1,81 @@
+@import '~@angular/material/theming';
+// @include mat-core();
+
+$config1: mat-typography-config(
+  $font-family: 'Akronim, cursive'
+);
+
+:root {
+    --main-bg-color: pink;
+    --padding: 15px 
+  }
+
+// @media screen and (width: 750px) {
+//     --padding : 30px;
+//     --main-bg-color: red;
+    
+// }
+
+$config2: mat-typography-config(
+  $font-family: 'IBM Plex Sans Condensed, sans-serif',
+);
+
+// --color:'blue';
+$font-sizes:200px;
+
+.first{
+    @include mat-core($config1);
+}
+
+.second{
+    $alternate-primary: mat-palette($mat-light-blue);
+    $alternate-accent:  mat-palette($mat-yellow, 400);
+    
+    $alternate-theme: mat-dark-theme($alternate-primary, $alternate-accent);
+    
+    @include angular-material-theme($alternate-theme);
+    @include mat-core($config2);
+}
+
+$candy-app-primary: mat-palette($mat-yellow);
+$candy-app-accent:  mat-palette($mat-pink, A200, A100, A400);
+$candy-app-theme:   mat-light-theme($candy-app-primary, $candy-app-accent);
+
+// Include the theme styles for only specified components.
+@include mat-core-theme($candy-app-theme);
+@include mat-button-theme($candy-app-theme);
+// @include mat-checkbox-theme($candy-app-theme);
+
+// $custom-primary: mat-palette($mat-deep-orange);
+// $custom-accent:  mat-palette($mat-pink);
+// $font-size-change:150px;
+// $font-family: 'IBM Plex Sans Condensed, sans-serif';
+// $mat-h1:mat-palette($mat-yellow);
+// $custom-theme: mat-light-theme($custom-primary, $custom-accent, );//$font-family);
+
+// @include angular-material-theme($custom-theme);
+
+// // $custom-theme: mat-light-theme($custom-primary, $custom-accent);
+
+// // TO 
+// $custom-theme: mat-dark-theme($custom-primary, $custom-accent);
+
+
+// @include mat-core();
+
+$my-app-primary: mat-palette($mat-blue-grey);
+$my-app-accent:  mat-palette($mat-pink, 500, 900, A100);
+$my-app-warn:    mat-palette($mat-deep-orange);
+
+$my-app-theme: mat-light-theme($my-app-primary, $my-app-accent, $my-app-warn);
+
+@include angular-material-theme($my-app-theme);
+
+.alternate-theme {
+    $alternate-primary: mat-palette($mat-light-blue);
+    $alternate-accent:  mat-palette($mat-yellow, 400);
+    
+    $alternate-theme: mat-dark-theme($alternate-primary, $alternate-accent);
+    
+    @include angular-material-theme($alternate-theme);
+}
